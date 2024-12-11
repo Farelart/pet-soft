@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/components/logo";
+import { Button } from "@/components/ui/button";
 
 export default function page() {
   return (
@@ -20,8 +22,13 @@ export default function page() {
           Use PetSoft to easily keep track of pets under your care. Get lifetime
           access for $299.
         </p>
-        <div className="mt-10">
-          <button>Sign up</button>
+        <div className="mt-10 space-x-3">
+          <Button asChild>
+            <Link href="/signup">Get started</Link>
+          </Button>
+          <Button asChild variant="secondary">
+            <Link href="/login">Login</Link>
+          </Button>
         </div>
       </div>
     </main>
